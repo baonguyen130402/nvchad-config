@@ -13,5 +13,15 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+lspconfig.tailwindcss.setup {}
+
+-- lspconfig.tsserver.setup {
+--   init_options = {
+--     preferences = {
+--       disableSuggestions = true,
+--     }
+--   }
+-- }
+
 --
 -- lspconfig.pyright.setup { blabla}

@@ -5,7 +5,10 @@ local overrides = require "custom.configs.overrides"
 local plugins = {
 
   -- Override plugin definition options
-
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false,
+  },
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -15,6 +18,11 @@ local plugins = {
         config = function()
           require "custom.configs.null-ls"
         end,
+      },
+    },
+    opts = {
+      servers = {
+        tailwindcss = {},
       },
     },
     config = function()
@@ -64,10 +72,27 @@ local plugins = {
   {
     "windwp/nvim-ts-autotag",
     event = "VeryLazy",
-    config = function ()
+    config = function()
       require "custom.configs.autotag"
+    end,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function ()
+      require("nvim-surround").setup({
+        --Configuration hear
+      })
     end
-  }
+  },
+  -- {
+  --   "mfussenegger/nvim-lint",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require "custom.configs.lint"
+  --   end,
+  -- },
 
   -- To make a plugin not be loaded
   -- {
