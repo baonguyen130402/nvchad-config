@@ -7,6 +7,8 @@ M.general = {
     ["<C-a>"] = { "gg<S-v>G", "select all", opts = { nowait = true } },
     ["<leader>qq"] = { "<cmd> :qa! <CR>", "Quit all" },
     ["<leader>te"] = { "<cmd> :tabnew <CR>", "New tab space" },
+    ["<leader>l"] = { "$", "" },
+    ["<leader>h"] = { "_", "" },
     ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
